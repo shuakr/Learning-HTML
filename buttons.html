@@ -6,13 +6,50 @@
     <title>Buttons</title>
 </head>
 <body>
-    <button onclick="master()" style="background-color: black; color: aqua; border-radius: 10px;">Click!</button>
-    <p id="text">Butona bas</p>
+    <button onclick="master()" style="background-color: black; color: aqua; border-radius: 10px;">Click!</button> <!-- Creates a button with black background and aqua text, running the master() function when clicked.-->
+    <span> <!--Opens a JavaScript section inside the HTML file.-->
+        <p id="text" style=
+        "background-color: black;
+        color: aqua; 
+        width: fit-content;">Click the button and watch the magic happens.</p> <!-- A paragraph (<p>) with a black background and aqua text. The text will change when the button is clicked.-->
+    </span>
     <script>
-        function master()
+        function master() // Defines a JavaScript function named master.
         {
-            document.getElementById("text").innerHTML="Nice!"
+            document.getElementById("text").innerHTML="Nice!" // Changes the text inside the p tag to Nice! when the button is clicked.
         }
     </script>
+    <div>
+        <a href="https://youtube.com"> <!--Creates a clickable link that directs the user to YouTube.We learned it before.-->
+            <style> /*Opens a CSS section to style elements.*/
+                .my-button { /*Defines a CSS class called .my-button for styling a button.*/
+                    width: 100px; /*These lines will be on learning.CSS soon.*/
+                    height: 50px;
+                    font-size: medium;
+                    background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+                .my-button:hover {
+                    transform:scale(1.2); /*When hovered,the bottun grows 20% larger.*/
+                }    
+            </style>
+            <button class="my-button"> <!-- Creates a styled button inside the <a> link.-->
+                Click!!
+            </button>
+        </a>
+    </div>
+    <hr>
+    <div>
+        <a href="">
+            <button disabled> <!--Creates a disabled button (not clickable).-->
+                Click!!!
+            </button>
+        </a>
+    </div>
 </body>
 </html>
