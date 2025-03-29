@@ -3,12 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Forms</title>
 </head>
 <body>
-    <form action="">
-        <label for="isim">Name:</label>
-        <input type="text" name="" id="name"> <!--Kullanıcıdan çekmek istediğimiz verinin cinsi type parametresi-->
+    <form action=""> <!--Opens a form. The action="" means no URL is set for submission.-->
+        <label for="a">YourName:</label> <!-- Creates a label for the name input field.-->
+        <input type=" text" name="a" id="a" placeholder="Yusuf Talha"> <!--A text input field for the user's name with a placeholder.-->
+
+        <br><br> <!--Adds line breaks for spacing.-->
+
+        <label for="b">YourSurname:</label> <!--Label for the surname input field.-->
+        <input type="text" name="b" id="b" placeholder="Yilmaz"> <!--A text input field for the user's surname.-->
+
+        <br><br>
+
+        <label for="c">Password:</label> <!--Label for the password field.-->
+        <input type="password" name="c" id="c" placeholder="******" maxlength="8"> <!--A password input with a maximum length of 8 characters.-->
+
+        <br><br>
+
+        <label for="d">E-mail:</label> <!--Label for the email field.-->
+        <input type="email" name="d" id="d" placeholder="forexample@mail.com"> <!--An email input field that only accepts valid email formats.-->
+
+        <br><br>
+
+        <label for="e">PhoneNumber:</label> <!--Label for the phone number field.-->
+        <input type="tel" name="e" id="e" placeholder="(555) 555 55 55"> <!--A telephone input with a placeholder format.-->
+
+        <br><br>
+
+        <label for="f">DateOfBirth:</label> <!--Label for the date of birth field.-->
+        <input type="date" name="f" id="f"> <!--A date picker input field.-->
+
+        <br><br>
+
+        <label for="g">Siblings:</label> <!--Label for the number of siblings field.-->
+        <input type="number" name="g" id="g" min="0" max="10"> <!-- A number input for siblings (allowed range: 0-10).-->
+
+        <br><br>
+
+        <label for="h">Gender:</label> <!--Label for gender selection.-->
+        <label for="woman" style="cursor: pointer;">Woman:</label>
+        <input type="radio" name="h" id="woman" value="woman"> <!--These two lines are a radio button for selecting "Woman".-->
+        <label for="man">Man:</label>
+        <input type="radio" name="h" id="man" value="man"> <!--A radio button for selecting "Man".-->
+                <!--Only one can be selected.-->
+        <br><br>
+
+        <select name="" id=""> <!--Creates a dropdown menu.-->
+        <option value="1">Example1</option>
+        <option value="2">Example2</option>
+        <option value="3">Example3</option>
+                <!-- Three options inside the dropdown.-->
+        </select>
+
+        <br><br>
+
+        <label for="">Working</label>
+        <input type="checkbox"> <!--A checkbox for selecting "Working".-->
+
+        <br><br>
+
+        <label for="text">Textarea</label> <!--Label for the textarea(multi-line input).-->
+        <textarea name="" id="text" cols="15" rows="5"></textarea> <!--A textarea with a size of 15 columns x 5 rows.-->
+        
+        <br><br>
+
+        <input type="file" accept=".pdf"> <!--A file upload input (only allows PDF files because of the accept parameter.).-->
+
+        <br><br>
+
+        <input type="reset"> <!--A reset button(clears all input fields)-->
+        <input type="submit"> <!--A reset button(sends form data)-->
+
+
     </form>
 </body>
 </html>
